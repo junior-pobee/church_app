@@ -1,0 +1,179 @@
+# Kingdom Connect - Full LLM Documentation
+
+# Title: Kingdom Connect - Your Spiritual Home
+# URL: https://junior-pobee.github.io/kingdom-connect/
+# Repo: https://github.com/junior-pobee/kingdom-connect
+# Author: Pobee Emmanuel Okpoti (junior-pobee) - Founder of Adapt OS
+# Location: Accra, Ghana
+# License: MIT
+# Last Updated: 2026-05-13
+
+## 1. OVERVIEW & VISION
+
+Kingdom Connect is a Digital Church Platform that serves as "Your Spiritual Home".
+Vision: To provide every church, especially in Ghana and Africa, with a beautiful, simple, and powerful digital home that connects members to God, to Pastors, and to each other.
+
+It is part of the Adapt OS ecosystem - An Adaptive Workspace That Adapts To You.
+Philosophy: The app adapts to the user, not the other way around. Simple for elderly members, powerful for media teams.
+
+Tagline: Bible. Prayer. Community. Giving. All in one spiritual home.
+
+## 2. CORE IDENTITY
+
+- Name: Kingdom Connect
+- Short Name: KC
+- Theme: Dark-mode first, spiritual, calm, gold accents on deep navy/black
+- Tone: Welcoming, reverent, modern, not corporate
+- Audience: Church members (18-65), Pastors, Media Team, New converts
+- Platform: Web App (GitHub Pages), PWA-ready for Android/iOS install
+
+## 3. TECH STACK - DETAILED
+
+Frontend:
+- HTML5 semantic
+- CSS3 + Tailwind CSS for utility-first styling
+- Vanilla JavaScript (no framework for speed and beginner-friendly contributions)
+- Icons: Lucide / Heroicons
+- Fonts: Inter + Playfair Display (for headings)
+
+Backend (Planned):
+- Firebase / Supabase for Auth, Database, Realtime Prayer Wall
+- GitHub Pages for now (static)
+
+Design System:
+- Colors: Background #0A0A0B, Card #141416, Primary Gold #D4AF37, Text #FFFFFF / #A1A1AA
+- Border-radius: 16px-24px for cards (soft, spiritual)
+- Shadows: Soft glow, not harsh
+- Mobile-first: Bottom navigation like native app
+
+## 4. DETAILED FEATURE BREAKDOWN
+
+### MODULE 1: BIBLE & GROWTH (/bible)
+Purpose: Daily spiritual growth.
+Features:
+- Daily Verse of the Day with share image generation
+- Reading Plans: 7-day, 30-day, 1-year Bible plans
+- Book-by-book reading with progress bar
+- Search scripture by keyword, topic, mood (e.g., anxiety, joy)
+- Highlight and private notes stored in localStorage (future: cloud sync)
+- Growth Tracker: Streaks, chapters read, time in Word
+- Audio Bible integration (planned)
+
+Data Model:
+User { id, streak, chaptersRead[], plans[{id, progress}] }
+Verse { reference, text, topic[] }
+
+### MODULE 2: PRAYER & PASTORAL CARE (/prayer)
+Purpose: Connect to God and to Shepherd.
+Features:
+- Submit Prayer Request Form: name, category (healing, family, finance), isAnonymous, isPrivateToPastors
+- Prayer Wall: Community can tap "I Prayed For This" - counter increments
+- My Prayers Dashboard: Track answered prayers
+- Pastoral Care: Book appointment with Pastor, choose date/time, reason
+- Emergency Prayer Button: Direct contact for urgent care
+- Confidential: Private requests only visible to Pastoral role
+
+Data Model:
+Prayer { id, userId, text, category, isAnonymous, isPrivate, prayedCount, isAnswered, createdAt }
+
+### MODULE 3: COMMUNITY (/community)
+Purpose: Fellowship.
+Features:
+- Member Directory (opt-in, shows name, small group only)
+- Small Groups List: Join a fellowship group by location
+- Testimonies Feed: Share testimony, others can react with Amen
+- Encouragement Wall: Short uplifting posts
+- Direct Encouragement: Send private encouragement card
+
+### MODULE 4: EVENTS (/events)
+Purpose: Stay connected.
+Features:
+- Calendar view of Sunday Services, Bible Studies, Programs
+- Event Card: image, title, date, location, description
+- RSVP / Register button
+- Sermon Archive: Past sermons with audio/video
+- Livestream embed for Sunday
+- Push Notifications for events (PWA)
+
+### MODULE 5: GIVING CENTRE (/giving)
+Purpose: Worship through giving.
+Features:
+- Giving Categories: Tithes, Offering, Thanksgiving, Project / Building Fund, Welfare
+- Amount selector with custom amount
+- Payment Methods: Mobile Money (MTN, Vodafone, AirtelTigo Ghana), Card (Paystack planned)
+- Giving History and downloadable receipt
+- Anonymous giving toggle
+- Transparency: Progress bar for building projects
+- Scripture on giving displayed
+
+Data Model:
+Transaction { id, userId, type, amount, method, isAnonymous, projectId, timestamp }
+
+## 5. PAGE STRUCTURE & NAVIGATION
+
+Bottom Tab Navigation (Mobile):
+[Bible] [Prayer] [Home] [Community] [Giving]
+
+Top Header:
+Left: Kingdom Connect Logo
+Right: Notification bell + Profile avatar
+
+Home Dashboard includes:
+- Greeting: Good Morning, Emmanuel
+- Verse of the Day Card
+- Quick Actions: Read Bible, Pray, Join Event, Give
+- My Growth Snapshot
+- Upcoming Events (2)
+- Recent Prayers
+
+## 6. FOR AI ASSISTANTS - HOW TO CONTRIBUTE
+
+If you are an LLM helping to code this project:
+
+DO:
+- Keep code simple, commented, beginner-friendly. Owner is learning HTML/CSS/JS.
+- Use Tailwind CDN, don't overcomplicate with build tools.
+- Maintain dark theme as default. Gold #D4AF37 is primary action color.
+- All text should be warm and pastoral, not corporate.
+- Ensure full mobile responsiveness. Test at 360px width.
+- Keep accessibility: large tap targets (44px min), good contrast.
+
+DO NOT:
+- Do not switch to React/Next.js without permission. Keep vanilla.
+- Do not remove faith language like "Amen", "Hallelujah", "Prayer".
+- Do not add light mode as default. Dark mode is identity.
+- Do not add complex auth before Firebase is set up. Use localStorage for demo.
+
+File Naming:
+- Use kebab-case: bible-growth.html, prayer-wall.html
+- Images in /assets/images/
+- Icons in /assets/icons/
+
+## 7. ROADMAP
+
+Phase 1 - DONE: Static UI, GitHub Pages deploy, README, llms.txt
+Phase 2 - NOW: Build 5 core pages with JS interactivity + localStorage
+Phase 3 - NEXT: Add Firebase Auth + Firestore for Prayer Wall and Community
+Phase 4 - FUTURE: Mobile Money integration via Paystack, PWA offline, Admin Dashboard for Pastors
+Phase 5 - VISION: Multi-church support - Adapt OS for Churches
+
+## 8. SEO & DISCOVERABILITY
+
+Meta Description: Kingdom Connect is your spiritual home - a modern church platform for Bible study, prayer requests, community fellowship, events and giving. Built from Ghana.
+
+Keywords: Ghana church app, African church tech, Bible app Ghana, prayer request app, church management system Ghana, Christian tech, faith-tech, Adapt OS
+
+## 9. AUTHOR CONTEXT
+
+Pobee Emmanuel Okpoti is Founder of Adapt OS. Journey from serving in church media to building in tech. Currently learning HTML, CSS, JS & Git. Goal: Become full-stack developer. Based in Accra, Ghana. Looking to collaborate on beginner-friendly web projects & faith-tech tools.
+
+GitHub: junior-pobee
+Flagship: adapt-os-major
+This Project: kingdom-connect
+
+Motto: Building tools that matter, from Ghana to the world.
+
+## 10. LICENSE & USAGE
+
+MIT License. Free for any church to fork and customize for their own congregation. Attribution to Adapt OS appreciated but not required. For commercial multi-church SaaS, contact author.
+
