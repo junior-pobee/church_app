@@ -285,7 +285,7 @@ Similarly, payment processing and sensitive church financial records should use 
 
 Open the Kingdom Connect GitHub repository.
 
-<a href="https://github.com/junior-pobee">
+<a href="https://github.com/junior-pobee/kingdom-connect">
   <img src="https://img.shields.io/badge/OPEN%20DEVELOPER%20PROFILE-181717?style=for-the-badge&logo=github&logoColor=white" alt="Open developer profile"/>
 </a>
 
