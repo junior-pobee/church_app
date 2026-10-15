@@ -296,5 +296,5 @@ If the repository is public, download its source files through GitHub.
 Alternatively, clone it using Git:
 
 ```bash
-git clone https://github.com/junior-pobee/kingdom-connect 
+git clone https://github.com/junior-pobee/kingdom-connect.git 
 
